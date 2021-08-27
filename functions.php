@@ -35,6 +35,6 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\hecksite_theme_setup' );
  * Enqueue theme scripts and styles.
  */
 function hecksite_theme_scripts() {
-	wp_enqueue_style( 'hecksite-style', get_stylesheet_uri(), [], filemtime( 'style.css' ) );
+	wp_enqueue_style( 'hecksite-style', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ) );
 }
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\hecksite_theme_scripts' );
